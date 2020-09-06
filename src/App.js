@@ -1,16 +1,19 @@
 import React from "react";
 import "./App.css";
-import { Switch, Route } from "react-router-dom";
-import Phones from "./components/Phones/PhonesView";
-import PhoneDetailed from "./components/PhoneDetailed/PhoneDetailedView";
+import { Switch, Route, Redirect } from "react-router-dom";
+import PhoneList from './views/PhoneList';
+import PhoneDetails from './views/PhoneDetails';
 import NotFound from "./components/404/NotFound";
 
 function App() {
   return (
     <>
       <Switch>
-        <Route exact path="/phones" component={Phones} />
-        <Route path="/item/:id" component={PhoneDetailed} />
+        <Route exact path="/">
+          <Redirect to="/phones"></Redirect>
+        </Route>
+        <Route exact path="/phones" component={PhoneList} />
+        <Route path="/phones/:id" component={PhoneDetails} />
         <Route component={NotFound} />
       </Switch>
     </>

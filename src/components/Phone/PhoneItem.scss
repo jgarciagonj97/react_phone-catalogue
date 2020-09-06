@@ -1,0 +1,36 @@
+@import '../../styles/variables.scss';
+
+.phone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: $padding-mobile;
+  background: white;
+  align-items: center;
+
+  &__name {
+    color: $color-dark;
+    text-align: center;
+    text-transform: uppercase;
+
+    &__text {
+      font-size: $title-size-mobile;
+    }
+  }
+
+  &__image {
+    img {
+      width: 20rem;
+      height: 30rem;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__manufacturer {
+    &__text {
+      font-size: $subtitle-size-mobile;
+      text-transform: uppercase;
+    }
+  }
+}
