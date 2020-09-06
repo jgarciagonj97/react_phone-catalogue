@@ -1,0 +1,21 @@
+.contenedor{
+    text-align: center;
+    margin-top: 10vh;
+}
+
+.row h2{
+    margin: 0 auto;
+}
+
+.contenedor div button{
+    margin: 0 auto;
+    width: 20%;
+}
+
+@media(max-width:400px){
+
+    .container div button{
+        width: 40%;
+    }
+
+}

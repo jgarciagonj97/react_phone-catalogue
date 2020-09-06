@@ -4,6 +4,7 @@ import { fetchPhones } from '../redux';
 import { Link } from 'react-router-dom';
 
 import PhoneItem from '../components/Phone/PhoneItem';
+import Loading from "../components/Loading/Loading";
 
 import './PhoneList.scss';
 
@@ -17,7 +18,7 @@ const PhoneList = () => {
   }, [dispatch]);
 
   return phonesData.loading ? (
-    <h1>Cargando</h1>
+    <Loading />
   ) : phonesData.error ? (
     <h2>{phonesData.error}</h2>
   ) : (

@@ -10,12 +10,12 @@ const NotFound = () => {
     }
 
     return (
-        <div className="container">
-            <div className="row">
-                <h2>¡UPS! You may want to say this...</h2>
-                <button type="button" className="btn btn-primary btn-block" onClick={handleClick}>
-                    Go home
-        </button>
+        <div className="contenedor">
+            <h2>¡UPS! You may want to go here...</h2>
+            <div>
+                <button type="button" className="btn btn-warning btn-block mt-4" onClick={handleClick}>
+                    Go to catalogue
+                    </button>
             </div>
         </div>
     );
