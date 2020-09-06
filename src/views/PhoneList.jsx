@@ -23,7 +23,7 @@ const PhoneList = () => {
   ) : (
         <div className="phones">
           {phonesData.phones.map(phone => (
-            <div className="phones__item" key={phone._id} data-cy="phone-item">
+            <div className="phones_item" key={phone._id} data-cy="phone-item">
               <Link to={`/phones/${phone._id}`}>
                 <PhoneItem
                   key={phone._id}
