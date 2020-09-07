@@ -4,13 +4,16 @@ import { Link } from "react-router-dom";
 
 const NavBar = () => {
     return (
-        <ul className="container">
-            <li>
-                <Link to="/phones" className="navbar__option">
-                    Phones
+        <div>
+            <ul className="container">
+                <img src="https://images.ctfassets.net/5gv1edeicqfs/48EM0LU3Z6gWkQCcCaeoq2/704ea273b5d50d09ff450a5ceaa74631/guidesmiths-logo.png" alt="guidesmiths_logo" className="image" />
+                <li>
+                    <Link to="/phones" className="navbar__option">
+                        Phones
                 </Link>
-            </li>
-        </ul>
+                </li>
+            </ul>
+        </div>
     );
 };
 

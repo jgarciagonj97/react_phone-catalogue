@@ -8,8 +8,12 @@ const HomePage = () => {
         history.push("/phones");
     };
     return (
-        <div className="contenedor_home">
-            < h1 > WELCOME TO THE FIRST PHONE CATALOGUE DEVELOPED BY GUIDESMITHS</h1 >
+        <div>
+            <div className="contenedor_home">
+            </div>
+            <div className="titulo">
+                <h1> WELCOME TO THE FIRST PHONE CATALOGUE DEVELOPED BY GUIDESMITHS </h1 >
+            </div>
         </div>
     );
 };
