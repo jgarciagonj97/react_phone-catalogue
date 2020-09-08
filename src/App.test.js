@@ -8,9 +8,9 @@ Enzyme.configure({ adapter: new EnzymeAdapter() });
 
 test("the app has 4 routes", () => {
   const wrapper = shallow(<App />);
-  expect(wrapper.find(Route).length).toBe(4);
+  expect(wrapper.find(Route).length).toBe(3);
 });
 
-test("renders the app without crashing", () => {
+test("renders without crashing", () => {
   shallow(<App />);
 });

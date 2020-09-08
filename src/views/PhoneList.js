@@ -1,12 +1,11 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchPhones } from '../redux';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchPhones } from "../redux";
 
-import PhoneItem from '../components/Phone/PhoneItem';
+import PhoneItem from "../components/Phone/PhoneItem";
 import Loading from "../components/Loading/Loading";
 
-import './PhoneList.scss';
+import "./PhoneList.scss";
 
 const PhoneList = () => {
   const phonesData = useSelector(state => state.phoneReducer);
@@ -25,14 +24,16 @@ const PhoneList = () => {
         <div className="phones">
           {phonesData.phones.map(phone => (
             <div className="phones_item" key={phone._id} data-cy="phone-item">
-              <Link to={`/phones/${phone._id}`}>
-                <PhoneItem
-                  key={phone._id}
-                  name={phone.name}
-                  manufacturer={phone.manufacturer}
-                  imageFileName={phone.imageFileName}
-                />
-              </Link>
+              <PhoneItem
+                key={phone._id}
+                name={phone.name}
+                imageFileName={phone.imageFileName}
+                description={phone.description}
+                price={phone.price}
+                screen={phone.screen}
+                processor={phone.processor}
+                ram={phone.ram}
+              />
             </div>
           ))}
         </div>
