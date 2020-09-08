@@ -1,9 +1,16 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import App from './App';
+import React from "react";
+import EnzymeAdapter from "enzyme-adapter-react-16";
+import Enzyme, { shallow } from "enzyme";
+import App from "./App";
+import { Route } from "react-router-dom";
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+Enzyme.configure({ adapter: new EnzymeAdapter() });
+
+test("the app has 4 routes", () => {
+  const wrapper = shallow(<App />);
+  expect(wrapper.find(Route).length).toBe(4);
+});
+
+test("renders the app without crashing", () => {
+  shallow(<App />);
 });
