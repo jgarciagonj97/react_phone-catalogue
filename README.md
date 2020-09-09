@@ -1,5 +1,6 @@
 ## Previous step
 - Clone the API repo (https://github.com/jgarciagonj97/api_phone-catalogue) and follow its instructions 
+The web layout is extremely simple because of the time but it is responsive anyway
 
 # INSTRUCTIONS
 

@@ -6,7 +6,7 @@ import { Route } from "react-router-dom";
 
 Enzyme.configure({ adapter: new EnzymeAdapter() });
 
-test("the app has 4 routes", () => {
+test("the app has 3 routes", () => {
   const wrapper = shallow(<App />);
   expect(wrapper.find(Route).length).toBe(3);
 });
